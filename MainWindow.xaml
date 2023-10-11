@@ -1,0 +1,22 @@
+﻿<Window x:Class="Tema2_FormatoTexto.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tema2_FormatoTexto"
+        mc:Ignorable="d"
+        Title="Formato Texto" Height="300" Width="631">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="25,28,0,0" TextWrapping="Wrap" Text="Texto" VerticalAlignment="Top" Foreground="#FF01020E"/>
+        <TextBlock HorizontalAlignment="Left" Margin="450,72,0,0" TextWrapping="Wrap" Text="Color de texto" VerticalAlignment="Top" Width="79" RenderTransformOrigin="0.492,0.076"/>
+        <CheckBox x:Name="negrita" Content="Negrita" HorizontalAlignment="Left" Margin="254,72,0,0" VerticalAlignment="Top" FontWeight="Bold" Click="negrita_Click"/>
+        <CheckBox x:Name="cursiva" Content="Cursiva" HorizontalAlignment="Left" Margin="357,72,0,0" VerticalAlignment="Top" FontStyle="Italic" Click="cursiva_Click"/>
+
+        <RadioButton x:Name="azul" Tag="colorAzul" Content="Azul" HorizontalAlignment="Left" Margin="534,50,0,0" VerticalAlignment="Top" GroupName="colortexto" IsChecked="True" Click="RadioButton_Click"/>
+        <RadioButton x:Name="rojo" Tag="colorRojo" Content="Rojo" HorizontalAlignment="Left" Margin="534,75,0,0" VerticalAlignment="Top" GroupName="colortexto" Click="RadioButton_Click"/>
+        <RadioButton x:Name="verde" Tag="colorVerde" Content="Verde" HorizontalAlignment="Left" Margin="534,101,0,0" VerticalAlignment="Top" GroupName="colortexto" Click="RadioButton_Click"/>
+
+        <TextBox x:Name= "textoLeer" HorizontalAlignment="Left" Margin="25,50,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="172" Height="85" KeyUp="textoLeer_KeyUp" PreviewKeyDown="textoLeer_PreviewKeyDown"/>
+        <TextBlock x:Name="textoEscribir" HorizontalAlignment="Left" Margin="25,187,0,0" TextWrapping="Wrap" Background="Beige"  VerticalAlignment="Top" Width="558" Height="38" FontSize="18" TextAlignment="Center" TextTrimming="CharacterEllipsis"/>
+    </Grid>
+</Window>
